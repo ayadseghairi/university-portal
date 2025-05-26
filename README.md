@@ -66,7 +66,7 @@ A modern, secure, multilingual university website built with React.js frontend a
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 university-portal/
 ├── src/                          # Frontend source
 │   ├── components/              # Reusable components
@@ -90,7 +90,7 @@ university-portal/
 │   ├── tests/                  # Backend tests
 │   └── uploads/                # File uploads
 └── docs/                       # Documentation
-\`\`\`
+```
 
 ## 🚀 Getting Started
 
@@ -103,57 +103,57 @@ university-portal/
 ### Installation
 
 1. **Clone the repository:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/ayadseghairi/university-portal.git
    cd university-portal
-   \`\`\`
+   ```
 
 2. **Install frontend dependencies:**
-   \`\`\`bash
+   ```
    npm install
-   \`\`\`
+   ```
 
 3. **Set up backend:**
-   \`\`\`bash
+   ```bash
    cd backend
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 4. **Environment setup:**
-   \`\`\`bash
+   ```bash
    # Copy environment files
    cp .env.example .env
    cp backend/.env.example backend/.env
    
    # Edit the .env files with your configuration
-   \`\`\`
+   ```
 
 5. **Initialize database:**
-   \`\`\`bash
+   ```bash
    cd backend
    python scripts/setup_database.py
-   \`\`\`
+   ```
 
 6. **Create admin user:**
-   \`\`\`bash
+   ```bash
    python scripts/create_admin.py
-   \`\`\`
+   ```
 
 ### Development
 
 **Start both frontend and backend:**
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 **Or start them separately:**
-\`\`\`bash
+```bash
 # Frontend (Terminal 1)
 npm run dev:frontend
 
 # Backend (Terminal 2)
 npm run dev:backend
-\`\`\`
+```
 
 The application will be available at:
 - **Frontend:** http://localhost:3000
@@ -162,14 +162,14 @@ The application will be available at:
 ### Testing
 
 **Run frontend tests:**
-\`\`\`bash
+```bash
 npm test
-\`\`\`
+```
 
 **Run backend tests:**
-\`\`\`bash
+```bash
 npm run test:backend
-\`\`\`
+```
 
 ## 🔐 Security Features
 
@@ -244,20 +244,20 @@ npm run test:backend
 ### Environment Variables
 
 **Frontend (.env):**
-\`\`\`env
+```env
 VITE_API_URL=http://localhost:5000/api
 VITE_APP_NAME=University of Khenchela
 VITE_UPLOAD_MAX_SIZE=5242880
-\`\`\`
+```
 
 **Backend (backend/.env):**
-\`\`\`env
+```env
 FLASK_ENV=development
 SECRET_KEY=your-secret-key
 JWT_SECRET_KEY=your-jwt-secret
 DATABASE_URL=sqlite:///university.db
 CORS_ORIGINS=http://localhost:3000
-\`\`\`
+```
 
 ## 📊 Monitoring & Logging
 
@@ -277,7 +277,7 @@ CORS_ORIGINS=http://localhost:3000
 ## 🚀 Deployment
 
 ### Production Build
-\`\`\`bash
+```bash
 # Build frontend
 npm run build
 
@@ -286,13 +286,13 @@ export FLASK_ENV=production
 
 # Run with production server
 gunicorn -w 4 -b 0.0.0.0:5000 "app:create_app('production')"
-\`\`\`
+```
 
 ### Docker Deployment
-\`\`\`bash
+```bash
 # Build and run with Docker Compose
 docker-compose up -d
-\`\`\`
+```
 
 ### Environment Setup
 1. Set secure secret keys
